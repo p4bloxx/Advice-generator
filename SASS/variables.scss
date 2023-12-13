@@ -1,0 +1,190 @@
+//Tipography
+$ff:'Manrope', sans-serif;
+
+$fs-11: 0.6875rem;
+$fs-13: 0.8125rem;
+$fs-24: 1.5rem;
+$fs-28: 1.75rem;
+
+//Colors
+$dark-blue: rgba(32, 39, 51, 1);
+$dark-grey-blue: rgba(49, 58, 72, 1);
+$light-cyan: rgba(206, 227, 233, 1);
+$neon-green: rgba(83, 255, 170, 1);
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body{
+  font-family: $ff;
+  font-weight: 800;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Components
+@media screen and (max-width: 767px) {
+  main{
+    align-self: start;
+    margin-block-start: 7.5rem;
+  }
+}
+
+.container{
+  margin-inline: 1rem;
+  padding: 2.5rem $fs-24 0 $fs-24;
+  text-align: center;
+  box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.10);
+  width: min(100% - 2rem, 33.75rem);
+  margin-inline: auto;
+}
+
+//Utility classes and mixins
+.clr-green{
+  color: $neon-green;
+}
+
+.clr-cyan{
+  color: $light-cyan;
+}
+
+.bg-green{
+  background-color: $neon-green;
+}
+
+.bg-gray-blue{
+  background-color: $dark-grey-blue;
+}
+
+.b-radius{
+  border-radius: 0.9375rem;
+}
+
+//Block elements
+#patt-desk{
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  #patt-desk{
+    display: block;
+  }
+
+  #patt-mob{
+    display: none;
+  }
+}
+
+.counter{
+  font-size: $fs-11;
+  letter-spacing: 3.457px; 
+}
+
+#advice{
+  font-size: $fs-24;
+  letter-spacing: -0.257px;
+  margin-block: $fs-24;
+  transition: all 0.3s ease;
+}
+
+.separator{
+  margin-inline: auto;
+}
+
+#new-advice{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  transform: translateY(2rem);
+  transition: all 0.3s ease;
+    &:hover{
+      box-shadow: 0px 0px 40px 0px $neon-green;
+    }
+}
