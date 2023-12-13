@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/advice-generator-html-csssass-js-E593ll65ZL](https://www.frontendmentor.io/solutions/advice-generator-html-csssass-js-E593ll65ZL)
+- Live Site URL: [https://p4bloxx.github.io/Advice-generator/](https://p4bloxx.github.io/Advice-generator/)
 
 ## My process
 
